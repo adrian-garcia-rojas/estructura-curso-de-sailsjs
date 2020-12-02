@@ -21,6 +21,39 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'GET /ejemplo':{
+    fn: function(req, res){
+      return res.json({mensaje: 'ok'})
+    }
+    //-----------------ES PARTE DE LA ESTRUCTURA --------------------
+    // view: '',
+    // fn: function() {},
+    // controller: '',
+    // action: ''
+  },
+
+  'POST /crear': function(req, res){
+    
+      let title = req.body.title
+      let body = req.body.body
+
+      return res.json({ title: title, body: body})
+      //return res.json({mensaje: 'ok post crear'})
+      
+  },
+
+  'POST /eliminar': function(req, res){
+    let id = req.body.id
+
+    return res.json({mensaje: 'este id fue eliminado: '+id})
+
+  },
+
+  'POST /actualizar': function(req, res){
+    let name = req.body.name
+    return res.json({mensaje: 'este name fue actualizado: '+name})
+  }
+
 
   /***************************************************************************
   *                                                                          *
