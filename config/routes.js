@@ -52,7 +52,19 @@ module.exports.routes = {
   'POST /actualizar': function(req, res){
     let name = req.body.name
     return res.json({mensaje: 'este name fue actualizado: '+name})
-  }
+  },
+
+  // 'GET /controller':{
+  //   controller: 'Test',
+  //   action:'test'
+  // }
+'GET /controller': 'TestController.test', //esta es una forma abreviada de hacer la llamada al controlador Test y la funcion test
+
+'GET /controller1/:id': 'TestController.test1'
+
+
+
+
 
 
   /***************************************************************************
