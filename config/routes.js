@@ -59,12 +59,15 @@ module.exports.routes = {
   //   action:'test'
   // }
 'GET /controller': 'TestController.test', //esta es una forma abreviada de hacer la llamada al controlador Test y la funcion test
-
 'GET /controller1/:id': 'TestController.test1', //pasa de parametros
-
 'GET /words': 'WordController.list',
 'POST /words/:id': 'WordController.show',
-'POST /words': 'WordController.store'
+'POST /words': 'WordController.store',
+
+//actions
+'GET /items': 'item/list',
+'GET /items/:id': 'item/show',
+'POST /items': 'item/store'
 
 
 
