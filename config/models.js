@@ -53,7 +53,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  // migrate: 'alter',
+   migrate: 'alter', // esto interviene para hacer las migraciones automaticas a la db en modo desarrollo
 
 
   /***************************************************************************

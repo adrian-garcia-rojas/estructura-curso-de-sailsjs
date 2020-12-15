@@ -67,7 +67,16 @@ module.exports.routes = {
 //actions
 'GET /items': 'item/list',
 'GET /items/:id': 'item/show',
-'POST /items': 'item/store'
+'POST /items': 'item/store',
+
+
+//ORM
+'GET /rooms': 'RoomController.list',
+'GET /rooms/:id': 'RoomController.show',
+'POST /rooms': 'RoomController.store',
+'PUT /rooms/:id': 'RoomController.update',
+'DELETE /rooms/:id': 'RoomController.destroy'
+
 
 
 
